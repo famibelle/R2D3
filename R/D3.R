@@ -1094,6 +1094,8 @@ D3Tree<-function(JSON, file_out){
   fileConn<-file(file_out)
   writeLines(paste0(header, JSON$json, footer), fileConn)
   close(fileConn)
+  htmlOutput <- paste0(header, JSON$json, footer)
+  return(htmlOutput)
   
   }    
   
